@@ -24,12 +24,8 @@ app.use('/', indexRouter);
 app.use('/newStudent', studentRouter);
 
 
-
-
 app.listen(3000);
 console.log("Server listening at http://localhost:3000");
-
-
 
 
 // error handler
@@ -42,51 +38,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
-
-
-
-
-
-// test functions 
-
-// get all students 
-// db.query(getAllStudents(), (err, res)=>{
-//   if (err){
-//     console.log(err);
-//     return;
-//   }
-//   console.log(res);
-// });
-
-
-// db.query("INSERT INTO STUDENTS (first_name, last_name, email, enrollment_date) VALUES ('Snoop', 'Dogg', 'snoop@dogg.com', '2023-11-16')", (err, res)=>{
-//   if (err){
-//     console.log("Error:" + err.detail);
-//     return;
-//   }
-//   console.log(res.rows);
-// });
-
-// db.query(updateStudentEmail(3, 'jim.beam@gmail.com'), (err, res)=>{
-//   if (err){
-//     console.log(err);
-//     return;
-//   }
-//   console.log(res);
-// });
-
-
-// db.query(deleteStudent(4), (err, res)=>{
-//   if (err){
-//     console.log(err);
-//     return;
-//   }
-//   console.log(res);
-// });
-
-
 
 
 module.exports = app;

@@ -51,7 +51,6 @@ router.post('/:student_id', async function(req, res, next) {
 });
 
 
-
 async function getStudent(student_id){
     return await db.query(`SELECT * FROM STUDENTS WHERE student_id= ${student_id}`);
 }
