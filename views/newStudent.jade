@@ -1,0 +1,28 @@
+extends layout 
+
+block content
+    h1= title
+    
+    if student
+        form(action=student.url, method="post").studentForm 
+            label(for="first_name") First name
+            input(type="text", name="first_name" disabled value=student.first_name) 
+            label(for="last_name") Last name
+            input(type="text", name="last_name" disabled value=student.last_name) 
+            label(for="email") Email
+            input(type="text", name="email" value=student.email)
+            label(for="enrollment_date") Enrollment date
+            input(type="date", name="enrollment_date" disabled value=student.enrollment_date) 
+            input(type="submit", value="Submit") 
+    else 
+        form(action="/newStudent", method="post").studentForm 
+            label(for="first_name") First name
+            input(type="text", name="first_name")
+            label(for="last_name") Last name
+            input(type="text", name="last_name") 
+            label(for="email") Email
+            input(type="text", name="email")
+            label(for="enrollment_date") Enrollment date
+            input(type="date", name="enrollment_date") 
+            input(type="submit", value="Submit") 
+

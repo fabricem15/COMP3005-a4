@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1= title
+  div#main
+    table 
+      thead 
+        tr 
+          th Student ID
+          th First name 
+          th Last name 
+          th Email 
+          th Enrollment date
+          th Action
+      tbody
+        each item in results 
+          tr 
+            td #{item.student_id}
+            td #{item.first_name}
+            td #{item.last_name}
+            td #{item.email}
+            td #{item.enrollment_date}
+            td     
+              a(href!='/newStudent/' + item.student_id) Edit 
+           
+    p Delete student id:
+    form(action="/", method="post").delete  
+      input(type="text" name="student_id")
+      input(type="submit", value="Submit")
+
+     
+    div.link 
+      a(href="/newStudent") New student 
+
+    
+
+
+
