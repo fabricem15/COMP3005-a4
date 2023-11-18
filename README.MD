@@ -1,3 +1,4 @@
+
 # Project Description 
 
 This is a full-stack CRUD application that interacts with a SQL database and allows the user to perform CRUD operations on the Student database. It is a web application built using Node.js and Express as the backend and HTML, CSS, and Javascript for the frontend. 
@@ -6,7 +7,9 @@ The homepage displays all the students in the database in a table that shows all
 From the homepage, the user can delete a student using their student id, click on a link to add a new student or edit an existing student's email address. 
 
 All of the relevant function implementations can be found in the `/routes/` folder. The `index.js` file contains the functions for selecting and deleting students while the `student.js` file contains the functions for adding a new student or updating a student. 
-
+# Demo link 
+https://youtu.be/5eEADlapjqM 
+** Note: There was a slight glitch in the video when I tried to edit the student email. ** 
 # Database setup instruction 
 - Create a database called Student using PostgreSQL
 - Run the `ddl.sql` file to create the students table
