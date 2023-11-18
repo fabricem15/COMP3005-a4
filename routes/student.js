@@ -2,12 +2,13 @@ var express = require('express');
 var router = express.Router();
 const db = require('../db');
 
-/* GET users listing. */
+/* Handle GET request for adding a new student*/
 router.get('/', function(req, res, next) {
   res.render('newStudent', {title: "Add student"});
   
 });
 
+/* Handle POST request for adding a new student*/
 router.post('/', async function(req, res){
 
     if (req.body == {}){
@@ -20,7 +21,7 @@ router.post('/', async function(req, res){
     
 });
 
-
+/* Handle GET request for editing student*/
 router.get('/:student_id', async function(req, res, next) {
     let student_id = req.params.student_id;
     
@@ -34,7 +35,7 @@ router.get('/:student_id', async function(req, res, next) {
     
 });
 
-
+/* Handle POST request for editing student*/
 router.post('/:student_id', async function(req, res, next) {
 
     if (req.body == {}){
@@ -60,7 +61,6 @@ async function updateStudentEmail(student_id, new_email){
 }
 
 async function addStudent(first_name, last_name, email, enrollment_date){
-
    return await db.query(`INSERT INTO  students (first_name, last_name, email, enrollment_date) VALUES ('${first_name}', 
     '${last_name}', '${email}', '${enrollment_date}')`);
 
