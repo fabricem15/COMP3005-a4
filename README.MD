@@ -8,10 +8,10 @@ From the homepage, the user can delete a student using their student id, click o
 All of the relevant function implementations can be found in the /routes/ folder. The index.js file contains the functions for selecting and deleting students while the student.js file contains the functions for adding a new student or updating a student. 
 
 # Database setup instruction 
-    - Create a database called Student using PostgreSQL
-    - Run the `ddl.sql`` file to create the students table
-    - Fill it with initial data from the `schema.sql`` file 
-    - Replace the database login credentials and port number in the `db.js` file as necessary
+- Create a database called Student using PostgreSQL
+- Run the `ddl.sql`` file to create the students table
+- Fill it with initial data from the `schema.sql`` file 
+- Replace the database login credentials and port number in the `db.js` file as necessary
     
 # App setup instruction 
     1. Ensure you have Node installed.
