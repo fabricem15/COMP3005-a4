@@ -9,7 +9,7 @@ From the homepage, the user can delete a student using their student id, click o
 All of the relevant function implementations can be found in the `/routes/` folder. The `index.js` file contains the functions for selecting and deleting students while the `student.js` file contains the functions for adding a new student or updating a student. 
 # Demo link 
 https://youtu.be/5eEADlapjqM 
-** Note: There was a slight glitch in the video when I tried to edit the student email. ** 
+**Note: There was a slight glitch in the video when I tried to edit the student email.** 
 # Database setup instruction 
 - Create a database called Student using PostgreSQL
 - Run the `ddl.sql` file to create the students table
