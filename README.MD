@@ -10,7 +10,7 @@ All of the relevant function implementations can be found in the `/routes/` fold
 # Database setup instruction 
 - Create a database called Student using PostgreSQL
 - Run the `ddl.sql` file to create the students table
-- Fill it with initial data from the `schema.sql`` file 
+- Fill it with initial data from the `schema.sql` file 
 - Replace the database login credentials and port number in the `db.js` file as necessary
     
 # App setup instruction 
